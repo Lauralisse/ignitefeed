@@ -1,19 +1,33 @@
+import { ThumbsUp, Trash } from 'phosphor-react'
+import { Avatar } from './Avatar'
 import styles from './Comment.module.css'
 
 export function Comment() {
     return (
         <div className={styles.comment}>
-            <img src="https://64.media.tumblr.com/6485c03b235059bcd894980e935cf030/eb624a78c38743f0-98/s100x200/90b5b80210d5018efff40f2bbed70241a93afe86.pnj"/>
+            <Avatar hasBorder={false} src="https://i.pinimg.com/564x/ac/b0/76/acb076e76083681fcc442feced28745c.jpg"/>
 
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>
-                    <header></header>
+                    <header>
+                        <div className={styles.authorAndTime}>
+                            <strong>Elizabeth Woolridge</strong>
+                            <time title="31 de outubro às 13:28h" dateTime="2022-10-31 13:28:05">Cerca de 1h atrás</time>
+                        </div>
 
-                    <p></p>
+                        <button title='Deletar comentário'>
+                            <Trash size={24} />
+                        </button>
+                    </header>
+
+                    <p>Muito bom V, parabéns!! 👏👏</p>
                 </div>
 
                 <footer>
-
+                    <button>
+                        <ThumbsUp />
+                        Aplaudir <span>20</span> 
+                    </button>
                 </footer>
             </div>
         </div>

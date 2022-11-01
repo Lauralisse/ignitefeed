@@ -1,12 +1,14 @@
 import styles from './Post.module.css'
 import '../global.css';
+import { Comment } from './Comment';
+import { Avatar } from './Avatar';
 
 export function Post() {
     return(
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img className={styles.avatar}
+                    <Avatar
                     src="https://64.media.tumblr.com/935eca4d50267604a8428cb19fdc73a5/3683373eaadba914-af/s100x200/6e4b412610483848da1e78346c9ba699fd8fedec.pnj"
                     />
                     <div className={styles.authorInfo}>
@@ -40,6 +42,12 @@ export function Post() {
             <button type='submit'>Publicar</button>
             </footer>
             </form>
+
+            <div className={styles.commentList}>
+                <Comment />
+                <Comment />
+                <Comment />
+            </div>
         </article>
     )
 }
